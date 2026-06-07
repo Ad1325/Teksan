@@ -1,4 +1,5 @@
 import customtkinter
+from customtkinter import CTkButton
 from PIL import Image
 import os
 import sys
@@ -20,7 +21,7 @@ class Sidebar(customtkinter.CTkFrame):
         self.width = width
         self.configure(width=self.width,
                        border_color='yellow',
-                       fg_color=('#D0DDD0','#0F0F0F'),
+                       fg_color='#0F0F0F',
                        corner_radius=0)
 
         icons_dir = resource_path('icons')
@@ -62,7 +63,7 @@ class Sidebar(customtkinter.CTkFrame):
                 print(f"خطا در بارگذاری تصاویر: {str(e)}")
                 Sidebar._images = {}  # تنظیم یک دیکشنری خالی در صورت خطا
 
-        self.close_sidebar_btn = customtkinter.CTkButton(self,
+        self.close_sidebar_btn = CTkButton(self,
                                            image=Sidebar._images['close'],
                                            text='',
                                            fg_color='transparent',
@@ -92,7 +93,6 @@ class Sidebar(customtkinter.CTkFrame):
         self.newchat_btn = customtkinter.CTkButton(self,
                                                    image=Sidebar._images['newchat'],
                                                    text='گفت و گوی جدید',
-                                                   text_color=('black','white'),
                                                    font=customtkinter.CTkFont('Vazir', size=20, weight='bold'),
                                                    fg_color='transparent',
                                                    hover_color='#708090',
@@ -103,7 +103,6 @@ class Sidebar(customtkinter.CTkFrame):
         self.models_btn = customtkinter.CTkButton(self,
                                                   image=Sidebar._images['models'],
                                                   text='مدل ها',
-                                                  text_color=('black','white'),
                                                   font=customtkinter.CTkFont('Vazir', size=20, weight='bold'),
                                                   fg_color='transparent',
                                                   hover_color='#708090',

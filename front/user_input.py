@@ -3,7 +3,7 @@ from PIL import Image
 import os
 import sys
 from option_files import Options_files
-from conversation import Conversation
+from convercation import Conversation
 
 # تابع امن برای مدیریت مسیرها در حالت exe و اجرا عادی
 def resource_path(relative_path):

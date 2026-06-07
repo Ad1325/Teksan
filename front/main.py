@@ -10,11 +10,10 @@ import sys
 import tkinter as tk
 from PIL import Image
 from dotenv import load_dotenv
-
-
 from dns_changer import change_dns, get_active_adapter
+
 from sidebar import Sidebar
-from conversation import Conversation, TopBar
+from convercation import Conversation, TopBar
 from user_input import User_input
 
 # مسیر فعلی فایل main.py
@@ -23,7 +22,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 env_path = os.path.join(current_dir, '.env')
 
 # بارگذاری فایل .env از مسیر مشخص شده
-load_dotenv(dotenv_path=r'.env')
+load_dotenv(dotenv_path=env_path)
 api_key = os.getenv("GOOGLE_API_KEY")
 if not api_key:
     print("خطا: کلید API یافت نشد!")
@@ -81,7 +80,7 @@ class LoadingAnimation(customtkinter.CTkLabel):
             if self.size <= self.min_size:
                 self.is_growing = True
 
-        self.configure(text="●", font=("Arial", self.size), text_color=('black','white'))
+        self.configure(text="●", font=("Arial", self.size))
         self.after(100, self.animate)
 
 

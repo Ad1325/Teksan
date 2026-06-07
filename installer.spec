@@ -3,19 +3,19 @@
 block_cipher = None
 
 a = Analysis(
-    [r"H:\Project\Teksan\front\main.py"],
-    pathex=[r"H:\Project\Teksan\front"],
+    [r"H:\Teksan-main\front\main.py"],
+    pathex=[r"H:\Teksan-main\front"],
     binaries=[],
     datas=[
-        (r"H:\Project\Teksan\icons", "icons"),
-        (r"H:\Project\Teksan\fonts", "fonts"),
-        (r"H:\TekSan-main\front\dns_changer.py", "."),
-        (r"H:\TekSan-main\front\conversation.py", "."),
-        (r"H:\Project\Teksan\front\option_files.py", "."),
-        (r"H:\Project\Teksan\front\sidebar.py", "."),
-        (r"H:\Project\Teksan\front\user_input.py.", "."),
-        (r"H:\Project\Teksan\front\.env", "."),
-        (r"H:\Project\Teksan\front\teksan.ico", ".")
+        (r"H:\Teksan-main\icons", "icons"),
+        (r"H:\Teksan-main\fonts", "fonts"),
+        (r"H:\TekSan-main\front\dns_changer.py", "front"),
+        (r"H:\TekSan-main\front\conversation.py", "front"),
+        (r"H:\Teksan-main\front\option_files.py", "front"),
+        (r"H:\Teksan-main\front\sidebar.py", "front"),
+        (r"H:\Teksan-main\front\user_input.py.", "front"),
+        (r"H:\Teksan-main\.env", "."),
+        (r"H:\Teksan-main\front\teksan.ico", "front")
 
     ],
     hiddenimports=[],
@@ -41,10 +41,9 @@ exe = EXE(
     strip=False,
     upx=True,
     upx_exclude=[],
-    manifest=r"manifest.xml",
     runtime_tmpdir=None,
     console=False,
-    icon=r"H:\Project\Teksan\icons\teksan.ico",
+    icon=r"H:\TekSan-main\front\teksan.ico",
     uac_admin=True
 )
 

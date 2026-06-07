@@ -17,9 +17,9 @@ class Options_files(customtkinter.CTkFrame):
     def __init__(self, master, **kwargs):
         super().__init__(master, **kwargs)
 
-        self.configure(fg_color=('#AAB99A','#545454'))
+        self.configure(fg_color='#545454')
 
-        
+        # مسیر پوشه icons
         icons_dir = resource_path(os.path.join('icons'))
 
         self.grid_columnconfigure((0, 1, 2, 3, 4, 5), weight=1)
@@ -59,7 +59,6 @@ class Options_files(customtkinter.CTkFrame):
                                                      border_color='gray',
                                                      hover_color='#708090',
                                                      text="PDF ترجمه ی",
-                                                     text_color=('black','white'),
                                                      font=customtkinter.CTkFont("Vazir", size=15),
                                                      anchor="e",
                                                      fg_color='transparent',
@@ -75,7 +74,6 @@ class Options_files(customtkinter.CTkFrame):
                                                           border_color='gray',
                                                           hover_color='#708090',
                                                           text='فایل های متنی',
-                                                          text_color=('black','white'),
                                                           font=customtkinter.CTkFont("Vazir", size=18),
                                                           anchor="e",
                                                           compound='right',
@@ -91,7 +89,6 @@ class Options_files(customtkinter.CTkFrame):
                                                                    border_color='gray',
                                                                    hover_color='#708090',
                                                                    text='عکس',
-                                                                   text_color=('black','white'),
                                                                    compound='right',
                                                                    image=self.imageFile_image,
                                                                    font=customtkinter.CTkFont("Vazir", size=18),
@@ -107,7 +104,6 @@ class Options_files(customtkinter.CTkFrame):
                                                            border_color='gray',
                                                            hover_color='#708090',
                                                            text='آنالیز فایل‌های صوتی',
-                                                           text_color=('black','white'),
                                                            font=customtkinter.CTkFont("Vazir", size=18),
                                                            anchor="e",
                                                            compound='right',
@@ -123,7 +119,6 @@ class Options_files(customtkinter.CTkFrame):
                                                   border_color='gray',
                                                   hover_color='#708090',
                                                   text='گفت‌وگوی صوتی',
-                                                  text_color=('black','white'),
                                                   font=customtkinter.CTkFont("Vazir", size=18),
                                                   anchor="e",
                                                   compound='right',
@@ -138,7 +133,6 @@ class Options_files(customtkinter.CTkFrame):
                                                  border_color='gray',
                                                  hover_color='#708090',
                                                  text='ویدئو',
-                                                 text_color=('black','white'),
                                                  font=customtkinter.CTkFont("Vazir", size=18),
                                                  anchor="e",
                                                  compound='right',
